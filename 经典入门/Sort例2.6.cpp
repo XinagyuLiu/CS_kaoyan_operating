@@ -10,14 +10,13 @@ int main()
 		int i;
 		for(i=500000;i>=-500000;i--)
 			Hash[i+OFFSET] = 0;
-		//Õâ¸öÎªÊ²Ã´²»ÄÜÖ±½ÓHash[1000001]={0}£»
 		for(i=1;i<=n;i++)
 		{
 			scanf("%d",&x);
 			Hash[x+OFFSET]++;
 		}
 		for(i=500000;i>=-500000;i--)
-		{ //´Ó´óµ½Ð¡Êä³öÇ°m¸ö
+		{ //ä»Žå¤§åˆ°å°è¾“å‡ºå‰mä¸ª
 			if(Hash[i+OFFSET])
 			printf("%d",i);
 			//???
