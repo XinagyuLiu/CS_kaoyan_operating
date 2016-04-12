@@ -5,7 +5,7 @@ int main()
 {
 	int n,m;
 	int x;
-	while(scanf("%d%d",&n,&m)!=EOF)
+	while(scanf("%d %d",&n,&m)!=EOF)
 	{
 		int i;
 		for(i=500000;i>=-500000;i--)
@@ -13,22 +13,22 @@ int main()
 		for(i=1;i<=n;i++)
 		{
 			scanf("%d",&x);
-			Hash[x+OFFSET]++;
+			Hash[x+OFFSET]=1;
 		}
 		for(i=500000;i>=-500000;i--)
-		{ //ä»å¤§åˆ°å°è¾“å‡ºå‰mä¸ª
-			if(Hash[i+OFFSET])
-			printf("%d",i);
-			//???
-			printf("%d",m);
+		{ //´Ó´óµ½Ğ¡Êä³öÇ°m¸ö			
+			if(Hash[i+OFFSET]){
+				printf("%d",i);
 			m--;
+			//Õâ¼¸¾ä¶ÔmµÄ²Ù×÷Ò»¶¨Òª·ÅÔÚ´óifµÄÀïÃæ
 			if(m!=0)
 				printf(" ");
-			else
-			{
+			else{
 				printf("\n");
 				break;
+				}
 			}
+
 		}
 	}
 	return 0;
