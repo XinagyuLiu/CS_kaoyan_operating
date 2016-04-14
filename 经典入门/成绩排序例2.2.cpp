@@ -1,4 +1,3 @@
-//为什么提交时不能通过呢？
 #include<stdio.h>
 #include<algorithm>
 #include<string.h>
@@ -11,7 +10,7 @@ struct Student
 	int grade;
 };
 bool cmp(Student A,Student B)
-{
+{	//这个不行，要写！=,因为除了<还有>=，自己改吧，参考另一个
 	if(A.grade<B.grade)
 		return true;
 	else if(strcmp(A.name,B.name)<0)
